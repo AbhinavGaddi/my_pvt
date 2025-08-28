@@ -1,0 +1,5 @@
+Old regex messages.secureMessage.html.regex:
+^(([\w\s\.,:;¡!¿?()#\"'%\*\+\-@\^&/$=\u00A0\u00B4\u2018\u2019\u201C\u201D])|(<\s*/?\s*(div|strong|em|u)\s*>))+$  Fixed:
+^[\w\s\.,:;¡!¿?()#\"'%\*\+\-@\^&/$=\u00A0\u00B4\u2018\u2019\u201C\u201D]*(?:<(?:/?(?:p|div|strong|em|u))>[\w\s\.,:;¡!¿?()#\"'%\*\+\-@\^&/$=\u00A0\u00B4\u2018\u2019\u201C\u201D]*)*$
+
+Old control: ^(([\w\s\.,:;¡!¿?()#\"'%\*\+\-@\^&/$=])|(<\s*/?\s*((div|p|br|strong|em|u)|(a(\s+((href\s*=\s*\"?(https:|mailto:|tel:)\S+\"?)|(target\s*=\s*\"?\S+\"?)))*))\s*>))+$  New control: ^([\w\s\.,:;¡!¿?()#\"'%\*\+\-@\^&/$=]|<\s*/?\s*(?:div|p|br|strong|em|u|a(?:\s+(?:href\s*=\s*"?(?:https:|mailto:|tel:)\S+"?|target\s*=\s*"\S+"?))*)\s*>)+$
